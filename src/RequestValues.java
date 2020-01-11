@@ -19,7 +19,7 @@ public class RequestValues {
         return values;
     }
 
-    public void setValuest(String values) {
+    public void setValues(String values) {
         this.values = values;
     }
 }

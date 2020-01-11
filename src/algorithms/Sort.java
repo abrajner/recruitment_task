@@ -1,9 +1,7 @@
 package algorithms;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+    import java.util.Collections;
 
 public class Sort extends Algorithm {
     private ArrayList inputData;
@@ -14,14 +12,6 @@ public class Sort extends Algorithm {
 
     public Sort(String inputData){
         this.inputData = convertValuesToListOfIntegers(inputData);
-    }
-
-    public List<Integer> getInputData() {
-        return inputData;
-    }
-
-    public void setInputData(ArrayList<Integer> inputData) {
-        this.inputData = inputData;
     }
 
     @Override
