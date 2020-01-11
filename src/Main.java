@@ -6,18 +6,18 @@ import algorithms.*;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchMethodException {
+    public static void main(String[] args) throws IOException {
+        ArrayList<Result> results = new ArrayList<>();
+
         RequestValuesParserFromFile requestValuesParserFromFile = new RequestValuesParserFromFile("test.txt");
         requestValuesParserFromFile.convertToRequestValueList();
-        ArrayList<RequestValues> requestValues = new ArrayList<>(requestValuesParserFromFile.getRequestValues());
-        requestValues.forEach(element -> {
-        });
-        String values = requestValuesParserFromFile.getRequestValues().get(0).getValues();
-        Sort sort = new Sort(values);
-        System.out.println(sort.process());
-        String values2 = requestValuesParserFromFile.getRequestValues().get(3).getValues();
-        Reverse reverse = new Reverse(values2);
-        System.out.println(reverse.process());
 
+        requestValuesParserFromFile.getRequestValues().forEach(element -> {
+            Algorithm algorithm = AlgorithmFactory.getAlgorithm(element.getRequestType(), element.getValues());
+            Result result = new Result(element.getRequestType(), element.getValues(), algorithm.process().toString());
+            results.add(result);
+        });
+
+        PrintResult.print(results);
     }
 }

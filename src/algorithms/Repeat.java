@@ -20,6 +20,6 @@ public class Repeat extends Algorithm {
     @Override
     public String process() {
 
-        return new String();
+        return "pizza";
     }
 }
