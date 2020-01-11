@@ -6,3 +6,5 @@ SORT
 3 5 9 1 5 8
 REVERSE
 123 fxvg 23567
+SORT
+2 5 a 0 9

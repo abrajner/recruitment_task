@@ -5,12 +5,17 @@ import java.util.ArrayList;
 public abstract class Algorithm<T> {
     public abstract T process();
 
-    ArrayList<Integer> convertValuesToListOfIntegers(String valuesInLine){
+    ArrayList<Integer> convertValuesToListOfIntegers(String valuesInLine) {
         String[] splitedValues = valuesInLine.split(" ");
         ArrayList<Integer> values = new ArrayList<>();
-        for (String splitedValue : splitedValues) {
+        try{
+            for (String splitedValue : splitedValues) {
             values.add(Integer.valueOf(splitedValue));
+            }
+            return values;
+        }catch (NumberFormatException e){
+            System.out.println("Wrong data");
         }
-        return values;
+        return new ArrayList<>();
     }
 }
