@@ -1,14 +1,16 @@
+package algorithms;
+
 import java.util.List;
 
-public class Sort implements Algorithm {
+public class Sort extends Algorithm {
     private List<Integer> inputData;
 
     public Sort(List inputData){
         if(inputData.get(0) instanceof Integer){
             this.inputData = inputData;
         }
-        else if(inputData.get(0) instanceof Integer){
-            this.inputData = RequestValuesDataType.convertValuesToListOfIntegers(inputData);
+        else if(inputData.get(0) instanceof String){
+            this.inputData = convertValuesToListOfIntegers(inputData);
         }
         else
             throw new IllegalArgumentException("Can't resolve type of elements in list");

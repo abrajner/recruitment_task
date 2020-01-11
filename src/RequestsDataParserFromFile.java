@@ -51,8 +51,4 @@ public class RequestsDataParserFromFile {
 
         return values;
     }
-
-    public Map<String, List<String>> convertToMap(){
-
-    }
 }

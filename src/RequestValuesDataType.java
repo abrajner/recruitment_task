@@ -25,10 +25,4 @@ public class RequestValuesDataType {
     public void setValuest(List<String> values) {
         this.values = values;
     }
-
-    public static List<Integer> convertValuesToListOfIntegers(List<String> values){
-        List<Integer> convertedValues = new ArrayList<>();
-        values.forEach((element) -> convertedValues.add(Integer.valueOf(element)));
-        return convertedValues;
-    }
 }
