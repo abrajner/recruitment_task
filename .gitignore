@@ -1,22 +1,15 @@
-# Java
+
+# Compiled class file
 *.class
+
+# Log file
+*.log
+
+# Package Files #
 *.jar
 *.war
+*.nar
 *.ear
-
-# Idea
-.idea
-*.iml
-*.iws
-*.ipr
-
-
-# Build
-out
-build
-bin
-
-# Other
-*.log
-*.swp
-*.bak
+*.zip
+*.tar.gz
+*.rar
