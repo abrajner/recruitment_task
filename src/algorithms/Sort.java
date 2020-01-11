@@ -10,7 +10,7 @@ public class Sort extends Algorithm {
         this.inputData = inputData;
     }
 
-    public Sort(String inputData) throws NumberFormatException {
+    public Sort(String inputData) {
         this.inputData = convertValuesToListOfIntegers(inputData);
     }
 

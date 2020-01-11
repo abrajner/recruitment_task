@@ -13,9 +13,7 @@ public abstract class Algorithm<T> {
             values.add(Integer.valueOf(splitedValue));
             }
             return values;
-        }catch (NumberFormatException e){
-            System.out.println("Wrong data");
-        }
+        }catch (NumberFormatException e){}
         return new ArrayList<>();
     }
 }
