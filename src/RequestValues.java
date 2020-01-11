@@ -1,28 +1,25 @@
-import java.util.ArrayList;
-import java.util.List;
+public class RequestValues {
+    private String requestType;
+    private String values;
 
-public class RequestValuesDataType {
-    private String request;
-    private List<String> values;
-
-    public RequestValuesDataType(String request, List<String> values){
-        this.request = request;
+    public RequestValues(String request, String values){
+        this.requestType = request;
         this.values = values;
     }
 
-    public String getRequest() {
-        return request;
+    public String getRequestType() {
+        return requestType;
     }
 
-    public void setRequest(String request) {
-        this.request = request;
+    public void setRequestType(String requestType) {
+        this.requestType = requestType;
     }
 
-    public List<String> getValuest() {
+    public String getValues() {
         return values;
     }
 
-    public void setValuest(List<String> values) {
+    public void setValuest(String values) {
         this.values = values;
     }
 }

@@ -1,14 +1,16 @@
 package algorithms;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public abstract class Algorithm {
-    public abstract void process();
+public abstract class Algorithm<T> {
+    public abstract T process();
 
-    public static List<Integer> convertValuesToListOfIntegers(List<String> values){
-        List<Integer> convertedValues = new ArrayList<>();
-        values.forEach((element) -> convertedValues.add(Integer.valueOf(element)));
-        return convertedValues;
+    public ArrayList<Integer> convertValuesToListOfIntegers(String valuesInLine){
+        String[] splitedValues = valuesInLine.split(" ");
+        ArrayList<Integer> values = new ArrayList<>();
+        for(int i = 0; i < splitedValues.length; i++){
+            values.add(Integer.valueOf(splitedValues[i]));
+        }
+        return values;
     }
 }

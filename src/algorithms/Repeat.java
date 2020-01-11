@@ -1,8 +1,10 @@
 package algorithms;
 
+import java.util.ArrayList;
+
 public class Repeat extends Algorithm {
     @Override
-    public void process() {
-
+    public ArrayList<String> process() {
+        return new ArrayList<>();
     }
 }
