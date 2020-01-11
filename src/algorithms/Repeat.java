@@ -9,7 +9,13 @@ public class Repeat extends Algorithm {
 
     @Override
     public String process() {
-
-        return "pizza";
+        char firstLetter = inputData.charAt(0);
+        Integer counter = 0;
+        for(int i = 0; i < inputData.length(); i++){
+            if(inputData.charAt(i) == firstLetter){
+                counter++;
+            }
+        }
+        return "\""+firstLetter+"\" repeats " + counter.toString() + " times";
     }
 }
