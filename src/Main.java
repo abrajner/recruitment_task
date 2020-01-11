@@ -10,13 +10,8 @@ public class Main {
         RequestValuesParserFromFile requestValuesParserFromFile = new RequestValuesParserFromFile("test.txt");
         requestValuesParserFromFile.convertToRequestValueList();
         ArrayList<RequestValues> requestValues = new ArrayList<>(requestValuesParserFromFile.getRequestValues());
-        for(int i = 0; i < requestValues.size(); i++){
-            String requestName = requestValues.get(i).getRequestType();
-            String values = requestValues.get(i).getValues();
-            Class cl = Class.forName(requestName);
-            Constructor con = cl.getConstructor(String.class);
-            Object xyz = con.newInstance(values);
-        }
+        requestValues.forEach(element -> {
+        });
         String values = requestValuesParserFromFile.getRequestValues().get(0).getValues();
         Sort sort = new Sort(values);
         System.out.println(sort.process());

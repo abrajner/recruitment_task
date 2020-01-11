@@ -1,8 +1,5 @@
 package algorithms;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Reverse extends Algorithm {
     private String inputData;
 
