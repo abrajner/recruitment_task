@@ -1,10 +1,25 @@
 package algorithms;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Reverse extends Algorithm {
+    private String inputData;
+
+    public Reverse(String inputData){
+        this.inputData = inputData;
+    }
+
+    public String getInputData() {
+        return inputData;
+    }
+
+    public void setInputData(String inputData) {
+        this.inputData = inputData;
+    }
     @Override
-    public ArrayList<String> process() {
-        return new ArrayList<>();
+    public String process() {
+        String reversed = new StringBuffer(inputData).reverse().toString();
+        return reversed;
     }
 }

@@ -40,7 +40,7 @@ public class RequestValuesParserFromFile {
         ArrayList<RequestValues> requestValuesTemp = new ArrayList<>();
         for(int i = 0; i < collectedLines.size(); i+=2){
             String requestName = collectedLines.get(i).substring(0,1).toUpperCase() + collectedLines.get(i).substring(1).toLowerCase();
-            RequestValues requestValues = new RequestValues(requestName, collectedLines.get(i + 1));
+            RequestValues requestValues = new RequestValues(requestName.replace("\\n",""), collectedLines.get(i + 1).replace("\\n",""));
             requestValuesTemp.add(requestValues);
         }
         this.requestValues = requestValuesTemp;
