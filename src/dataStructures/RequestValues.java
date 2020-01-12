@@ -1,3 +1,5 @@
+package dataStructures;
+
 public class RequestValues {
     private String requestType;
     private String values;

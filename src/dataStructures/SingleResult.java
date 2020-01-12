@@ -1,9 +1,11 @@
-public class Result {
+package dataStructures;
+
+public class SingleResult {
     private String previousValue;
     private String resultValue;
     private String requestType;
 
-    public Result(String requestType, String previousValue, String resultValue){
+    public SingleResult(String requestType, String previousValue, String resultValue){
         this.requestType = requestType;
         this.previousValue = previousValue;
         this.resultValue = resultValue;
