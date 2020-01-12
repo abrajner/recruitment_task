@@ -11,7 +11,6 @@ public class AlgorithmFactory {
         else if("Repeat".equalsIgnoreCase(type)) {
             return new Repeat(values);
         }
-
         return null;
     }
 }
